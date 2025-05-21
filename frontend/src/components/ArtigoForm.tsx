@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import { Form, Button, Spinner } from 'react-bootstrap';
-import { GeradorArtigoForm, EstiloArtigo, TamanhoArtigo } from '../types';
+import { GeradorArtigoForm, EstiloArtigo, TamanhoArtigo } from '../types/types';
 
 interface ArtigoFormProps {
     formData: GeradorArtigoForm;

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, ChangeEvent } from 'react';
 import { Container, Alert } from 'react-bootstrap';
-import { GeradorArtigoForm, GeradorArtigoResponse } from '../types';
+import { GeradorArtigoForm, GeradorArtigoResponse } from '../types/types';
 import { ArtigoService } from '../services/artigoService';
 import ArtigoForm from '../components/ArtigoForm';
 
