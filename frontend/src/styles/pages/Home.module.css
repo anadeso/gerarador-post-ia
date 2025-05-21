@@ -1,0 +1,41 @@
+.container {
+    padding: 2rem 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features {
+    margin-bottom: 3rem;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.ctaButton {
+    padding: 0.75rem 2.5rem;
+    font-weight: 600;
+    transition: transform 0.2s ease-in-out;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+} 

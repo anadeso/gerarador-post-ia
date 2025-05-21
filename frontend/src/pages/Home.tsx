@@ -1,59 +1,42 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import FeatureCard from '../components/FeatureCard';
+import { APP_TITLE, APP_DESCRIPTION, FEATURES } from '../constants/texts';
+import { ROUTES } from '../config/routes';
+import styles from '../styles/pages/Home.module.css';
 
+/**
+ * Componente que renderiza a página inicial
+ */
 const Home: React.FC = () => {
     return (
-        <Container>
-            <Row className="text-center mb-5">
+        <Container className={styles.container}>
+            <Row className={styles.header}>
                 <Col>
-                    <h1 className="display-4">Gerador de Artigos com IA</h1>
-                    <p className="lead">
-                        Crie artigos profissionais para seu blog WordPress usando Inteligência Artificial
-                    </p>
+                    <h1 className={styles.title}>{APP_TITLE}</h1>
+                    <p className={styles.description}>{APP_DESCRIPTION}</p>
                 </Col>
             </Row>
 
-            <Row className="mb-5">
-                <Col md={4}>
-                    <Card className="h-100">
-                        <Card.Body>
-                            <Card.Title>Geração Inteligente</Card.Title>
-                            <Card.Text>
-                                Utilize a potência da IA para criar artigos únicos e relevantes para seu blog.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col md={4}>
-                    <Card className="h-100">
-                        <Card.Body>
-                            <Card.Title>Personalização</Card.Title>
-                            <Card.Text>
-                                Escolha o estilo, tamanho e palavras-chave para artigos sob medida.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col md={4}>
-                    <Card className="h-100">
-                        <Card.Body>
-                            <Card.Title>Integração WordPress</Card.Title>
-                            <Card.Text>
-                                Publique seus artigos diretamente no WordPress com apenas um clique.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
+            <Row className={styles.features}>
+                {FEATURES.map(feature => (
+                    <Col key={feature.id} md={4}>
+                        <FeatureCard
+                            title={feature.title}
+                            description={feature.description}
+                        />
+                    </Col>
+                ))}
             </Row>
 
-            <Row className="text-center">
+            <Row className={styles.cta}>
                 <Col>
-                    <Link to="/gerar">
+                    <Link to={ROUTES.GERAR}>
                         <Button
                             variant="primary"
                             size="lg"
-                            className="px-5"
+                            className={styles.ctaButton}
                         >
                             Começar Agora
                         </Button>

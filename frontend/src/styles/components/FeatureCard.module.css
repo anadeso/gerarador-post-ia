@@ -1,0 +1,25 @@
+.featureCard {
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+}
+
+.featureCard .cardBody {
+    padding: 1.5rem;
+}
+
+.featureCard .cardTitle {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.featureCard .cardText {
+    color: #666;
+    line-height: 1.6;
+} 
